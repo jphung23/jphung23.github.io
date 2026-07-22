@@ -248,19 +248,6 @@
     <div class="contact__inner">
       <h2 id="contact-heading">Get in touch</h2>
       <span class="contact__rule" aria-hidden="true"></span>
-
-function sendMessage(data) {
-  return fetch("https://formspree.io/f/mrenlvel", {   // ← paste your endpoint here
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify(data),
-  }).then((res) => {
-    if (!res.ok) throw new Error("Formspree submission failed");
-  });
-}
       
       <form id="contactForm" class="contact-form" novalidate>
         <div class="form-row">
