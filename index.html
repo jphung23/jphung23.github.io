@@ -249,25 +249,19 @@
       <h2 id="contact-heading">Get in touch</h2>
       <span class="contact__rule" aria-hidden="true"></span>
 
-      <!--
-        FORM BACKEND — pick one and wire it up here:
-
-        • EmailJS:     include the EmailJS SDK, then in js/main.js call
-                        emailjs.send('SERVICE_ID','TEMPLATE_ID', data)
-        • Formspree:   set this form's action to your Formspree endpoint
-                        (action="https://formspree.io/f/xxxxxxx") and
-                        method="POST"; remove/relax the JS preventDefault,
-                        or keep it and fetch() the same URL.
-        • Netlify:     add data-netlify="true" and a hidden "form-name"
-                        input, then let the form submit normally
-                        (Netlify Forms doesn't need JS at all).
-        • Custom API:  point the fetch() call in js/main.js's
-                        handleSubmit() at your endpoint.
-
-        Right now handleSubmit() in js/main.js just simulates a network
-        call so the UI/UX (validation, loading, success/error states)
-        works end to end without any backend connected yet.
-      -->
+function sendMessage(data) {
+  return fetch("https://formspree.io/f/mrenlvel", {   // ← paste your endpoint here
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(data),
+  }).then((res) => {
+    if (!res.ok) throw new Error("Formspree submission failed");
+  });
+}
+      
       <form id="contactForm" class="contact-form" novalidate>
         <div class="form-row">
           <div class="form-field">
