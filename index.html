@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer Phung — Personal Portfolio</title>
+<meta name="description" content="Jennifer Phung — Operations, Project, Product &amp; Event Management portfolio.">
+
+<!-- Fonts: Baloo 2 (display), Lora (body/editorial), Inter (UI/labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Skip link for keyboard/screen-reader users -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="site-nav">
+  <div class="site-nav__inner">
+    <a href="#top" class="site-nav__brand">JP</a>
+    <nav aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span class="sr-only">Toggle menu</span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero__ocean" aria-hidden="true">
+      <svg class="hero__wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,40 C200,90 400,0 600,40 C800,80 1000,10 1200,50 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+
+    <div class="hero__content">
+      <!-- Replace assets/images/profile.svg with a real headshot -->
+      <div class="hero__photo">
+        <img src="assets/images/profile.svg" alt="Portrait of Jennifer Phung" width="220" height="220">
+      </div>
+      <div class="hero__text">
+        <p class="hero__eyebrow">Personal Portfolio</p>
+        <h1 class="hero__name">Jennifer Phung</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about__grid">
+      <div class="about__main">
+        <p class="about__focus">
+          Operations Management &bull; Event Management &bull; Project Management &bull;
+          Product Management &bull; Organizational Management
+        </p>
+
+        <p class="about__intro">
+          <span class="about__hi" aria-hidden="true">Hi!</span>
+          <span class="sr-only">Hi! </span>
+          I'm Jennifer, a recent graduate of California State University, Fullerton with a
+          B.B.A. in Marketing and Information Systems. I'm passionate about digital operations,
+          process optimization, and solving business challenges through technology, and I'm
+          always open to new opportunities and adventures.
+        </p>
+      </div>
+
+      <aside class="about__interests" aria-labelledby="interests-heading">
+        <h2 id="interests-heading">Interests</h2>
+        <ul>
+          <li>Music</li>
+          <li>Entertainment</li>
+          <li>Education</li>
+          <li>Science &amp; Technology</li>
+          <li>Environmental Sustainability</li>
+          <li>Social Impact</li>
+          <li>Humanitarian Relief</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <!-- Reusable card component: .exp-card. Duplicate an <li>, then edit the
+       image src/alt, title, and the <ul class="exp-card__skills"> items.
+       Add a real link by wrapping the card contents in <a> and adding
+       class "exp-card--link" (see comment near the end of this section). -->
+  <section class="experience" id="experience">
+    <h2 class="section-title">Experiences</h2>
+
+    <ul class="exp-grid">
+
+      <li class="exp-card" tabindex="0">
+        <img src="assets/images/logo-kroger.svg" alt="Kroger" loading="lazy">
+        <div class="exp-card__overlay">
+          <p class="exp-card__title">Kroger</p>
+          <ul class="exp-card__skills">
+            <li>Operations Support</li>
+            <li>Inventory Management</li>
+            <li>Process Improvement</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-card" tabindex="0">
+        <img src="assets/images/logo-wbs.svg" alt="Women in Business &amp; STEM" loading="lazy">
+        <div class="exp-card__overlay">
+          <p class="exp-card__title">Women in Business &amp; STEM</p>
+          <ul class="exp-card__skills">
+            <li>Event Planning</li>
+            <li>Community Outreach</li>
+            <li>Leadership</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-card" tabindex="0">
+        <img src="assets/images/logo-csuf-finance.svg" alt="CSUF Financial Services, Administration and Finance" loading="lazy">
+        <div class="exp-card__overlay">
+          <p class="exp-card__title">CSUF Financial Services</p>
+          <ul class="exp-card__skills">
+            <li>Data Management</li>
+            <li>Reporting</li>
+            <li>Administrative Ops</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-card" tabindex="0">
+        <img src="assets/images/logo-nbcu.svg" alt="NBCUniversal" loading="lazy">
+        <div class="exp-card__overlay">
+          <p class="exp-card__title">NBCUniversal</p>
+          <ul class="exp-card__skills">
+            <li>Project Coordination</li>
+            <li>Cross-team Collaboration</li>
+            <li>Production Support</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-card" tabindex="0">
+        <img src="assets/images/logo-universal.svg" alt="Universal Music Group" loading="lazy">
+        <div class="exp-card__overlay">
+          <p class="exp-card__title">Universal Music Group</p>
+          <ul class="exp-card__skills">
+            <li>Product Management</li>
+            <li>Digital Strategy</li>
+            <li>Stakeholder Comms</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-card" tabindex="0">
+        <img src="assets/images/logo-cabrillo.svg" alt="Cabrillo Marine Aquarium and Friends" loading="lazy">
+        <div class="exp-card__overlay">
+          <p class="exp-card__title">Cabrillo Marine Aquarium</p>
+          <ul class="exp-card__skills">
+            <li>Volunteer Coordination</li>
+            <li>Environmental Education</li>
+            <li>Guest Experience</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-card" tabindex="0">
+        <img src="assets/images/logo-bestbuddies.svg" alt="Best Buddies" loading="lazy">
+        <div class="exp-card__overlay">
+          <p class="exp-card__title">Best Buddies</p>
+          <ul class="exp-card__skills">
+            <li>Program Management</li>
+            <li>Peer Mentorship</li>
+            <li>Inclusion Advocacy</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-card" tabindex="0">
+        <img src="assets/images/logo-csuf-cba.svg" alt="CSUF College of Business and Economics" loading="lazy">
+        <div class="exp-card__overlay">
+          <p class="exp-card__title">CSUF College of Business</p>
+          <ul class="exp-card__skills">
+            <li>Marketing</li>
+            <li>Information Systems</li>
+            <li>Business Strategy</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <!-- Reusable photo tile: duplicate a <li>, swap the image src/alt and
+       (optionally) the data-caption used by screen readers. -->
+  <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading" class="sr-only">Photo gallery</h2>
+    <ul class="gallery-grid">
+      <li><img src="assets/images/gallery-1.svg" alt="Jennifer with the Women in Business &amp; STEM group, photo 1" loading="lazy"></li>
+      <li><img src="assets/images/gallery-2.svg" alt="Jennifer with the Women in Business &amp; STEM group, photo 2" loading="lazy"></li>
+      <li><img src="assets/images/gallery-3.svg" alt="Jennifer with the Women in Business &amp; STEM group, photo 3" loading="lazy"></li>
+      <li><img src="assets/images/gallery-4.svg" alt="Jennifer with the Women in Business &amp; STEM group, photo 4" loading="lazy"></li>
+      <li><img src="assets/images/gallery-5.svg" alt="Jennifer with the Women in Business &amp; STEM group, photo 5" loading="lazy"></li>
+      <li><img src="assets/images/gallery-6.svg" alt="Jennifer with the Women in Business &amp; STEM group, photo 6" loading="lazy"></li>
+    </ul>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="contact__inner">
+      <h2 id="contact-heading">Get in touch</h2>
+      <span class="contact__rule" aria-hidden="true"></span>
+
+      <!--
+        FORM BACKEND — pick one and wire it up here:
+
+        • EmailJS:     include the EmailJS SDK, then in js/main.js call
+                        emailjs.send('SERVICE_ID','TEMPLATE_ID', data)
+        • Formspree:   set this form's action to your Formspree endpoint
+                        (action="https://formspree.io/f/xxxxxxx") and
+                        method="POST"; remove/relax the JS preventDefault,
+                        or keep it and fetch() the same URL.
+        • Netlify:     add data-netlify="true" and a hidden "form-name"
+                        input, then let the form submit normally
+                        (Netlify Forms doesn't need JS at all).
+        • Custom API:  point the fetch() call in js/main.js's
+                        handleSubmit() at your endpoint.
+
+        Right now handleSubmit() in js/main.js just simulates a network
+        call so the UI/UX (validation, loading, success/error states)
+        works end to end without any backend connected yet.
+      -->
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <p class="form-error" id="name-error" role="alert"></p>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="form-error" id="email-error" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <p class="form-error" id="message-error" role="alert"></p>
+        </div>
+
+        <!-- Honeypot field for basic spam filtering; keep hidden from real users -->
+        <div class="form-field form-field--hidden" aria-hidden="true">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn-send" id="sendBtn">
+          <span class="btn-send__label">Send Message</span>
+          <span class="btn-send__spinner" aria-hidden="true"></span>
+        </button>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <p class="site-footer__quote">&ldquo;Everything Is A Win, When The Goal Is Experience.&rdquo;</p>
+  <p class="site-footer__meta">&copy; <span id="year"></span> Jennifer Phung</p>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
