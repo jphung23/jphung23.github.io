@@ -199,12 +199,14 @@ function initContactForm() {
  * index.html and let the browser submit natively.
  */
 function sendMessage(data) {
-  // Placeholder: simulates a network call so the UI works before a real
-  // backend is wired up. Remove once a real implementation is in place.
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.info("Contact form submitted (placeholder — no backend connected yet):", data);
-      resolve();
-    }, 900);
+  return fetch("https://formspree.io/f/mrenlvel", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(data),
+  }).then((res) => {
+    if (!res.ok) throw new Error("Formspree submission failed");
   });
 }
